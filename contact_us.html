@@ -44,6 +44,38 @@
       font-size: 1.2rem;
       margin-bottom: 20px;
     }
+    #register {
+ padding: 60px 0;
+ background: linear-gradient(135deg, rgba(0,245,255,0.1), rgba(255,0,255,0.1));
+ backdrop-filter: blur(12px);
+ }
+ form {
+ max-width: 600px;
+ margin: auto;
+ background: rgba(255,255,255,0.05);
+ border-radius: 20px;
+ padding: 35px;
+ box-shadow: 0 0 20px rgba(0,245,255,0.3);
+ }
+ form input, form select {
+ background: rgba(255,255,255,0.1);
+ border: none;
+ color: #fff;
+ }
+ form input::placeholder { color: #ccc; }
+ form button {
+ background: linear-gradient(90deg, #00f5ff, #ff00ff);
+ border: none;
+ color: #fff;
+ border-radius: 50px;
+ font-weight: 600;
+ padding: 10px;
+ transition: 0.3s;
+ }
+ form button:hover {
+ transform: scale(1.05);
+ box-shadow: 0 0 15px #00f5ff;
+ }
   </style>
 </head>
 
@@ -83,6 +115,32 @@
       <button class="carousel-control-next" type="button" data-bs-target="#gymCarousel" data-bs-slide="next">
         <span class="carousel-control-next-icon"></span>
       </button>
+    </div>
+  </section>
+  <section id="register">
+ 
+    <div class="container">
+      <h2 class="section-title"><i class="bi bi-person-fill"></i> Register Now</h2>
+      <form id="regForm">
+        <div class="mb-3">
+          <label class="form-label">Full Name</label>
+          <input type="text" id="name" class="form-control" placeholder="John Doe" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input type="email" id="email" class="form-control" 
+placeholder="example@gmail.com" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Select Plan</label>
+          <select id="plan" class="form-select">
+            <option>Basic</option>
+            <option>Pro</option>
+            <option>Elite</option>
+          </select>
+        </div>
+        <button type="submit" class="w-100">Register</button>
+      </form>
     </div>
   </section>
 
